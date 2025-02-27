@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head id="head">
         <meta charset="UTF-8">
         <title>Sean's Big Market!</title>
     </head>
     
-    <body>
-        <header>
+    <body id="body">
+        <header id="header">
             <h1>Welcome to Sean's Bazaar!</h1>
         </header>
 
-        <div>
-            <h2>Product 1</h2>
-            <a href="product-1.png"><img src="images/product-1.png" alt="product 1" width="500" height="500"></a>
-            <h3>Product 1 Description:</h3>
+        <section id="product-1">
+            <h2 id="product-1-title">Product 1</h2>
+            <img src="images/product-1.png" alt="product 1" width="500" height="500">
+            <h3 id="product-1-description">Product 1 Description:
             <p>
                 Experience the captivating allure of our contemporary abstract canvas,<br> 
                 where bold geometric forms and vibrant splashes of color<br> 
@@ -22,31 +22,35 @@
                 against a textured background, with dynamic brushstrokes and subtle color transitions that reveal new details with each viewing.<br>
                 It makes the perfect artistic accent for modern interiors while serving as an ideal placeholder element for HTML and CSS techniques.
             </p>
-            <table>
+            </h3>
+            
+            <table id="size-quantity-table">
                 <tr>
-                  <th>Size</th>
-                  <th>Quantity Available</th>
+                  <th id="size">Size</th>
+                  <th id="quantity">Quantity</th>
                 </tr>
                 <tr>
-                  <td>12" x 12"</td>
-                  <td>3</td>
+                  <td id="size">12" x 12"</td>
+                  <td id="quantity">3</td>
                 </tr>
                 <tr>
-                  <td>18 x 18"</td>
-                  <td>1</td>
+                  <td id="size">18" x 18"</td>
+                  <td id="quantity">1</td>
                 </tr>
                 <tr>
-                    <td>24" x 24"</td>
-                    <td>SOLD OUT!</td>
+                    <td id="size">24" x 24"</td>
+                    <td id="quantity">SOLD OUT!</td>
                 </tr>
                 <tr>
-                    <td>36" x 36"</td>
-                    <td>1</td>
+                    <td id="size">36" x 36"</td>
+                    <td id="quantity">1</td>
                 </tr>
               </table>
-            <button type="button">Buy now!</button>
-        </div>
+            <button id="button" type="button">Buy now!</button>
+        </section>
+        
+        <footer id="footer"><p>Copyright 2025</p></footer>
 
     </body>
-        <p><footer>Copyright 2025</footer></p>
+        
 </html>
