@@ -1,1 +1,489 @@
 <!DOCTYPE html>
+<!-- 
+  The DOCTYPE declaration tells the browser which version of HTML we're using.
+  This declaration is for HTML5, the latest standard.
+-->
+
+<html lang="en">
+<!-- 
+  The <html> element is the root element of an HTML page.
+  The lang attribute specifies the language of the document (English in this case).
+  You can change it to other language codes like "fr" for French, "es" for Spanish, etc.
+-->
+
+<head>
+  <!-- 
+    The <head> element contains meta information about the document,
+    such as character set, viewport settings, title, and links to CSS files.
+  -->
+  
+  <meta charset="UTF-8">
+  <!-- 
+    Specifies the character encoding for the HTML document.
+    UTF-8 is the most widely used and recommended.
+  -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    This meta tag helps with responsive design.
+    - width=device-width: sets the width of the page to follow the screen width of the device
+    - initial-scale=1.0: sets the initial zoom level when the page is first loaded
+  -->
+  
+  <title>It's HTML learnin' time!</title>
+  <!-- 
+    The <title> element defines the title of the document, which appears in:
+    - Browser tabs
+    - Bookmarks
+    - Search engine results
+    You should change this to reflect the content of your page.
+  -->
+  
+  <style>
+    /* 
+      This is an internal CSS section where you can define styles for your HTML elements.
+      You can also link to external CSS files using:
+      <link rel="stylesheet" href="styles.css">
+    */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1b24aa;
+      color: rgb(75, 199, 131);
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .important {
+      color: red;
+      font-weight: bold;
+    }
+    #unique-element {
+      border: 2px solid blue;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    /* 
+      Note the different selectors used above:
+      - element selector (body, header)
+      - class selector (.container, .important) - can be applied to multiple elements
+      - ID selector (#unique-element) - should be unique to one element
+    */
+  </style>
+</head>
+
+<body>
+  <!-- 
+    The <body> element contains all the content that is visible on your webpage.
+  -->
+  
+  <header>
+    <!-- 
+      The <header> element represents introductory content, typically a banner area
+      with a logo, navigation, and sometimes a tagline.
+    -->
+    <h1>Learning HTML</h1>
+    <!-- 
+      <h1> to <h6> are heading elements, with h1 being the most important.
+      Each page should generally have only one <h1>.
+    -->
+  </header>
+  
+  <div class="container">
+    <!-- 
+      <div> is a generic container for grouping elements.
+      The class attribute allows you to apply CSS styles or JavaScript to specific groups.
+      You can have multiple elements with the same class.
+    -->
+    
+    <section>
+      <!-- 
+        <section> represents a thematic grouping of content, typically with a heading.
+      -->
+      <h2>Basic Text Elements</h2>
+      
+      <p>This is a paragraph element. It creates a new line of text with some space before and after it.</p>
+      <!-- 
+        <p> defines a paragraph of text.
+        You can add as many paragraphs as needed.
+      -->
+      
+      <p>You can include <strong>bold text</strong> and <em>italicized text</em> within paragraphs.</p>
+      <!-- 
+        <strong> makes text bold and indicates importance.
+        <em> makes text italic and adds emphasis.
+      -->
+      
+      <p>You can also add <span class="important">important text</span> using spans with classes.</p>
+      <!-- 
+        <span> is an inline container used to mark up a part of a text.
+        Unlike <div>, it doesn't force a new line.
+      -->
+      
+      <p>This is a text with a <br>line break in the middle.</p>
+      <!-- 
+        <br> creates a line break within text.
+        It's a self-closing tag (no closing tag needed).
+      -->
+      
+      <hr>
+      <!-- 
+        <hr> creates a horizontal rule (line) to separate content.
+        It's also a self-closing tag.
+      -->
+    </section>
+    
+    <section>
+      <h2>Lists</h2>
+      
+      <h3>Unordered List</h3>
+      <ul>
+        <!-- 
+          <ul> creates an unordered list with bullet points.
+        -->
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+        <!-- 
+          <li> defines a list item.
+          Add as many as needed within the list.
+        -->
+      </ul>
+      
+      <h3>Ordered List</h3>
+      <ol>
+        <!-- 
+          <ol> creates an ordered list with numbers.
+          You can change the numbering style with CSS or with attributes:
+          <ol type="A"> for uppercase letters
+          <ol type="a"> for lowercase letters
+          <ol type="I"> for uppercase Roman numerals
+          <ol type="i"> for lowercase Roman numerals
+          <ol start="5"> to start from a specific number
+        -->
+        <li>First step</li>
+        <li>Second step</li>
+        <li>Third step</li>
+      </ol>
+      
+      <h3>Definition List</h3>
+      <dl>
+        <!-- 
+          <dl> creates a definition list for term-description pairs.
+        -->
+        <dt>HTML</dt>
+        <!-- <dt> defines a term -->
+        <dd>HyperText Markup Language, the standard language for creating web pages.</dd>
+        <!-- <dd> provides the definition/description -->
+        
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets, used for styling HTML documents.</dd>
+      </dl>
+    </section>
+    
+    <section>
+      <h2>Links and Images</h2>
+      
+      <p>
+        <a href="https://www.example.com">This is a link to Example.com</a>
+        <!-- 
+          <a> creates a hyperlink.
+          href attribute specifies the URL to link to.
+          You can also use:
+          - target="_blank" to open in a new tab
+          - title="Tooltip text" for a tooltip on hover
+          Example: <a href="page.html" target="_blank" title="Visit our page">Link</a>
+        -->
+      </p>
+      
+      <p>
+        <a href="#unique-element">This is an internal link</a> that jumps to an element with id="unique-element".
+        <!-- 
+          Links can point to specific sections within a page using the ID of an element.
+          The href starts with # followed by the ID.
+        -->
+      </p>
+      
+      <figure>
+        <!-- 
+          <figure> represents self-contained content, often with a caption.
+          Typically used for images, diagrams, code snippets, etc.
+        -->
+        <img src="/api/placeholder/400/200" alt="Placeholder image" width="400" height="200">
+        <!-- 
+          <img> embeds an image.
+          - src attribute specifies the image URL
+          - alt attribute provides alternative text for screen readers or if image fails to load
+          - width and height can be specified in pixels or percentage
+          In a real website, you would use an actual image path like "images/photo.jpg"
+        -->
+        <figcaption>This is a caption for the image.</figcaption>
+        <!-- <figcaption> provides a caption for the figure -->
+      </figure>
+    </section>
+    
+    <section>
+      <h2>Forms</h2>
+      
+      <form action="/submit-form" method="post">
+        <!-- 
+          <form> creates an HTML form for user input.
+          - action attribute specifies where to send form data when submitted
+          - method attribute specifies the HTTP method ("get" or "post")
+        -->
+        
+        <div>
+          <label for="name">Name:</label>
+          <!-- 
+            <label> defines a label for form controls.
+            The for attribute should match the id of the associated input.
+          -->
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <!-- 
+            <input> creates various input controls.
+            - type="text" creates a single-line text input
+            - id should be unique and match the label's for attribute
+            - name is used when submitting the form
+            - placeholder shows hint text that disappears when typing
+            - required makes the field mandatory
+          -->
+        </div>
+        
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+          <!-- 
+            type="email" creates an input specifically for email addresses.
+            Most browsers will validate the email format automatically.
+          -->
+        </div>
+        
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8">
+          <!-- 
+            type="password" creates a password field that masks the input.
+            minlength sets the minimum number of characters required.
+          -->
+        </div>
+        
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea>
+          <!-- 
+            <textarea> creates a multi-line text input.
+            - rows specifies the visible number of lines
+            - cols specifies the visible width in characters
+          -->
+        </div>
+        
+        <div>
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <!-- 
+              <select> creates a dropdown list.
+            -->
+            <option value="">--Please choose--</option>
+            <!-- 
+              <option> defines an option in the dropdown.
+              The value attribute specifies the value sent when the form is submitted.
+            -->
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+          </select>
+        </div>
+        
+        <div>
+          <fieldset>
+            <!-- 
+              <fieldset> groups related form elements.
+            -->
+            <legend>Choose your interests:</legend>
+            <!-- <legend> provides a caption for the fieldset -->
+            
+            <input type="checkbox" id="coding" name="interests" value="coding">
+            <label for="coding">Coding</label><br>
+            <!-- 
+              type="checkbox" creates a checkbox.
+              Multiple checkboxes with the same name create a group where multiple can be selected.
+            -->
+            
+            <input type="checkbox" id="design" name="interests" value="design">
+            <label for="design">Design</label><br>
+            
+            <input type="checkbox" id="marketing" name="interests" value="marketing">
+            <label for="marketing">Marketing</label>
+          </fieldset>
+        </div>
+        
+        <div>
+          <fieldset>
+            <legend>Gender:</legend>
+            
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <!-- 
+              type="radio" creates a radio button.
+              Radio buttons with the same name create a group where only one can be selected.
+            -->
+            
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </fieldset>
+        </div>
+        
+        <div>
+          <label for="date">Choose a date:</label>
+          <input type="date" id="date" name="date">
+          <!-- 
+            type="date" creates a date picker.
+            Other similar types include:
+            - type="time" for time
+            - type="datetime-local" for date and time
+            - type="month" for month and year
+            - type="week" for week and year
+          -->
+        </div>
+        
+        <div>
+          <label for="color">Choose a color:</label>
+          <input type="color" id="color" name="color" value="#4CAF50">
+          <!-- 
+            type="color" creates a color picker.
+            value sets the default color (here a green shade).
+          -->
+        </div>
+        
+        <div>
+          <label for="range">Rating (1-10):</label>
+          <input type="range" id="range" name="range" min="1" max="10" value="5">
+          <!-- 
+            type="range" creates a slider control.
+            - min and max set the range limits
+            - value sets the default value
+          -->
+        </div>
+        
+        <div>
+          <button type="submit">Submit</button>
+          <!-- 
+            <button> creates a clickable button.
+            - type="submit" makes it submit the form
+            Other types:
+            - type="reset" resets the form
+            - type="button" for a generic button (used with JavaScript)
+          -->
+          
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+    
+    <section>
+      <h2>Tables</h2>
+      
+      <table border="1">
+        <!-- 
+          <table> creates a table.
+          The border attribute adds a border (though it's better to use CSS for styling).
+        -->
+        
+        <caption>Monthly Savings</caption>
+        <!-- <caption> provides a title for the table -->
+        
+        <thead>
+          <!-- <thead> groups the header content -->
+          <tr>
+            <!-- <tr> defines a table row -->
+            <th>Month</th>
+            <th>Savings</th>
+            <!-- 
+              <th> defines a header cell.
+              You can use scope="col" or scope="row" to specify if it's a column or row header.
+            -->
+          </tr>
+        </thead>
+        
+        <tbody>
+          <!-- <tbody> groups the body content -->
+          <tr>
+            <td>January</td>
+            <td>$100</td>
+            <!-- <td> defines a standard data cell -->
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>$80</td>
+          </tr>
+        </tbody>
+        
+        <tfoot>
+          <!-- <tfoot> groups the footer content (often used for totals) -->
+          <tr>
+            <td>Total</td>
+            <td>$180</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    
+    <section id="unique-element">
+      <!-- 
+        Note that this section has an id attribute.
+        IDs must be unique within a document and can be used for:
+        - CSS styling
+        - JavaScript manipulation
+        - Internal linking (as shown earlier)
+      -->
+      <h2>Semantic Elements</h2>
+      <p>HTML5 introduced many semantic elements that provide meaning to the structure:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code> - For the top of a page or section</li>
+        <li><code>&lt;nav&gt;</code> - For navigation menus</li>
+        <li><code>&lt;main&gt;</code> - For the main content area</li>
+        <li><code>&lt;article&gt;</code> - For self-contained content</li>
+        <li><code>&lt;section&gt;</code> - For thematic grouping of content</li>
+        <li><code>&lt;aside&gt;</code> - For content tangentially related to the main content</li>
+        <li><code>&lt;footer&gt;</code> - For the bottom of a page or section</li>
+      </ul>
+      <!-- 
+        <code> is used to display code snippets.
+        We're escaping the HTML tags using &lt; and &gt; so they display as text.
+      -->
+    </section>
+  </div>
+  
+  <footer>
+    <!-- <footer> typically contains author info, copyright, links, etc. -->
+    <p>&copy; 2025 My HTML Learning Page</p>
+    <!-- &copy; is an HTML entity for the copyright symbol -->
+  </footer>
+  
+  <script>
+    // This is where you can add JavaScript
+    // For example, a simple alert when the page loads:
+    // alert('Welcome to my HTML page!');
+    
+    // Or a function that runs when a button is clicked:
+    function sayHello() {
+      alert('Hello, world!');
+    }
+    
+    // You can link to external JavaScript files using:
+    // <script src="script.js"></script>
+  </script>
+</body>
+</html>
