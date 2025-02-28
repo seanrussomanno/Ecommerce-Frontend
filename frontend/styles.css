@@ -9,7 +9,12 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     background-color:cornflowerblue;
-  }
+}
+
+#product-1-title {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:x-large;
+}
 
 #nuka-cherry {
     color: crimson;
@@ -43,7 +48,7 @@ td {
   }
   
 #buy-cola:hover {
-    background-color:rgb(209, 106, 106);
+    background-color:rgb(235, 108, 34);
   }
 
 #buy-cherry {
@@ -78,6 +83,6 @@ footer {
     margin-top: 10px;
     text-align: center;
     font-size: 14px;
-    color:crimson;
+    color:antiquewhite;
     padding: 10px;
   }
