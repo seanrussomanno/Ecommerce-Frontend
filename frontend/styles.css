@@ -1,5 +1,21 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color:cornflowerblue;
   }
+
+table {
+    margin-left: auto; margin-right: auto; width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th {
+    width:20%
+}
+
+td {
+    text-align: center;
+}
+
+tr:hover {background-color: blueviolet;
+}
