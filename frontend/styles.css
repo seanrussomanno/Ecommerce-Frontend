@@ -1,16 +1,18 @@
+header {
+    color: aliceblue;
+    background-color:black;
+    font-family: monospace;
+
+}
+
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     background-color:cornflowerblue;
   }
 
 table {
     margin-left: auto; margin-right: auto; width: 50%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-th {
-    width:20%
 }
 
 td {
