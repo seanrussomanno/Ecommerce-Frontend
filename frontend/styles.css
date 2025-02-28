@@ -11,6 +11,14 @@ body {
     background-color:cornflowerblue;
   }
 
+#nuka-cherry {
+    color: crimson;
+}
+
+#nuka-quantum {
+    color: rgb(37, 245, 245);
+}
+
 table, th, td {
     border: 7px;    
 }
@@ -24,7 +32,7 @@ td {
     text-align: center;
 }
 
-#buy-classic {
+#buy-cola {
     background-color:aliceblue;
     color:black;
     padding: 8px 15px;
@@ -34,8 +42,8 @@ td {
     font-weight: bold;
   }
   
-#buy-classic:hover {
-    background-color:greenyellow;
+#buy-cola:hover {
+    background-color:rgb(209, 106, 106);
   }
 
 #buy-cherry {
