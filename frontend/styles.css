@@ -3,14 +3,16 @@ header {
     background-color:black;
     font-family: monospace;
     padding:0%;
-    animation: rainbow 10s linear infinite;
+    animation: rainbow 3s linear infinite;
+    
   }
   
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    margin-left: auto; margin-right: auto; width: 60%;
-    background-color:cornflowerblue;
+    margin-left: auto; margin-right: auto; width: 70%;
+    background-color:black;
+    animation: rainbow 10s linear infinite;
 }
 
 #products-title {
