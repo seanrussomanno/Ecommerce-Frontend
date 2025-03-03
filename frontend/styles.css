@@ -2,6 +2,7 @@ header {
     color: aliceblue;
     background-color:black;
     font-family: monospace;
+    padding: 0px;
 
 }
 
@@ -39,47 +40,41 @@ td {
     text-align: center;
 }
 
-#buy-cola {
-    background-color:aliceblue;
-    color:black;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-#buy-cola:hover {
-    background-color:rgb(235, 108, 34);
-  }
+#buy-classic {
+  padding: 10px 20px;
+  background-color:lightblue;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+#buy-classic:hover {
+  transform: scale(1.2);
+  background-color: darkgoldenrod;
+}
 
 #buy-cherry {
-    background-color:white;
-    color:black;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-  }
+  padding: 10px 20px;
+  background-color:lightblue;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
   
 #buy-cherry:hover {
-    background-color:crimson;
-  }
+  transform: scale(1.2);
+  background-color:crimson;
+}
 
 #buy-quantum {
-    background-color:white;
-    color:black;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-  }
+  padding: 10px 20px;
+  background-color:lightblue;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
   
 #buy-quantum:hover {
-    background-color:rgb(37, 245, 245);
-  }
+  transform: scale(1.2);
+  background-color:aqua
+}
 
 footer {
     margin-top: 10px;
