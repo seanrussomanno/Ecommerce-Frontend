@@ -1,0 +1,72 @@
+header {
+    color: aliceblue;
+    background-color:black;
+    font-family: monospace;
+    padding:0%;
+    animation: rainbow 10s linear infinite;
+  }
+  
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-left: auto; margin-right: auto; width: 60%;
+    background-color:cornflowerblue;
+}
+
+#products-title {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:150%;
+}
+
+#nuka-cherry {
+    color: crimson;
+}
+
+#nuka-quantum {
+    color: rgb(37, 245, 245);
+}
+
+table, th, td {
+    border: 7px;    
+}
+
+table {
+    margin-left: auto; margin-right: auto; width: 50%;
+    border:crimson;
+}
+
+td {
+    text-align: center;
+}
+
+#buy-button {
+  padding: 10px 20px;
+  background-color:lightblue;
+  border-radius: 10px;
+  transition: transform 0.7s ease;
+}
+
+#buy-button:hover {
+  transform: scale(1.2);
+  background-color:lawngreen;
+  cursor:pointer;
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color:antiquewhite;
+    padding: 10px;
+  }
+
+  @keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    56% { color: blue; }
+    70% { color: indigo; }
+    84% { color: violet; }
+    100% { color: red; }
+  }
