@@ -50,8 +50,8 @@ td {
 
 #buy-button:hover {
   transform: scale(1.2);
-  background-color:lawngreen;
   cursor:pointer;
+  animation: rainbow 0.1s linear infinite;
 }
 
 footer {
