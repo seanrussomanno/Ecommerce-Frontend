@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart | Wasteland Refreshments</title>
-    <link rel="stylesheet" href="shopping_cart.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>\\\ Wasteland Refreshments ///</h1>
         <nav>
             <a href="product.html">Home</a>
@@ -17,10 +17,10 @@
         </nav>
     </header>
     
-    <div class="container">
+    <div class="cart-container">
         <h2>Your Shopping Cart</h2>
         
-        <table class="cart-table">
+        <table class="cart-table" id="cart-items">
             <thead>
                 <tr>
                     <th>Product</th>
@@ -31,64 +31,22 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody id="cart-items">
-                <tr>
-                    <td data-label="Product"><img src="images/nuka-classic.gif" alt="Nuka-Cola Classic" class="product-img"></td>
-                    <td data-label="Title">Nuka-Cola Classic</td>
-                    <td data-label="Price">$11.99</td>
-                    <td data-label="Quantity">
-                        <input type="number" min="1" value="2" class="quantity-input" onchange="updateQuantity(this, 11.99)">
-                    </td>
-                    <td data-label="Total" class="item-total">$23.98</td>
-                    <td data-label="Action"><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
-                </tr>
-                
-                <tr>
-                    <td data-label="Product"><img src="images/nuka-cherry.gif" alt="Nuka-Cherry" class="product-img"></td>
-                    <td data-label="Title">Nuka-Cherry</td>
-                    <td data-label="Price">$17.99</td>
-                    <td data-label="Quantity">
-                        <input type="number" min="1" value="1" class="quantity-input" onchange="updateQuantity(this, 17.99)">
-                    </td>
-                    <td data-label="Total" class="item-total">$17.99</td>
-                    <td data-label="Action"><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
-                </tr>
+            <tbody id="cart-body">
             </tbody>
         </table>
         
-        <div id="empty-cart-message" class="empty-cart" style="display: none;">
-            <h3>Your cart is empty</h3>
-            <p>Looks like you haven't added any refreshments to your cart yet.</p>
-            <a href="product.html" class="continue-shopping">Continue Shopping</a>
-        </div>
-        
-        <div class="cart-summary" id="cart-summary">
-            <h3>Order Summary</h3>
-            <div class="summary-item">
-                <span>Subtotal:</span>
-                <span id="subtotal">$41.97</span>
-            </div>
-            <div class="summary-item">
-                <span>Shipping:</span>
-                <span id="shipping">$5.00</span>
-            </div>
-            <div class="summary-item">
-                <span>Taxes:</span>
-                <span id="taxes">$3.77</span>
-            </div>
-            <div class="summary-item summary-total">
-                <span>Total:</span>
-                <span id="total">$50.74</span>
-            </div>
-            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        <div class="total-section">
+            <h3>Order Total: <span id="cart-total">$0.00</span></h3>
+            <button class="checkout-btn" onclick="alert('Thank you for your purchase!')">Checkout</button>
         </div>
     </div>
 
-    <footer>
-        Nuka-Cola Corporation assumes no liability for mutations, addiction, or sudden onset ghoulification.
-        © 2025
+    <footer id="footer">
+        <i>Nuka-Cola Corporation assumes no liability for mutations, addiction, or sudden onset ghoulification.
+            © 2025
+        </i>
     </footer>
 
-    <script src="shopping-cart.js"></script>
+    <script src="shopping_cart.js"></script>
 </body>
 </html>
