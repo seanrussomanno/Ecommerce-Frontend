@@ -41,17 +41,17 @@ td {
     text-align: center;
 }
 
-#buy-button {
+.buy-button {
   padding: 10px 20px;
-  background-color:lightblue;
+  background-color:azure;
   border-radius: 10px;
   transition: transform 0.7s ease;
 }
 
-#buy-button:hover {
+.buy-button:hover {
   transform: scale(1.2);
   cursor:pointer;
-  animation: rainbow 0.1s linear infinite;
+  background-color:aqua
 }
 
 footer {
