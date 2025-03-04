@@ -12,12 +12,11 @@ body {
     text-align: center;
     margin-left: auto; margin-right: auto; width: 70%;
     background-color:black;
-    animation: rainbow 10s linear infinite;
+    color: aliceblue;
 }
 
-#products-title {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:150%;
+#nuka-classic {
+  color: coral;
 }
 
 #nuka-cherry {
@@ -28,17 +27,10 @@ body {
     color: rgb(37, 245, 245);
 }
 
-table, th, td {
-    border: 7px;    
-}
-
 table {
-    margin-left: auto; margin-right: auto; width: 50%;
-    border:crimson;
-}
-
-td {
-    text-align: center;
+  margin-left: auto; margin-right: auto; width: 50%;
+  border:crimson;
+  color: aliceblue;
 }
 
 .buy-button {
@@ -51,7 +43,7 @@ td {
 .buy-button:hover {
   transform: scale(1.2);
   cursor:pointer;
-  background-color:aqua
+  background-color:chartreuse
 }
 
 footer {
