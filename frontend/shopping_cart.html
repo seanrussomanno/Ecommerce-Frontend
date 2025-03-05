@@ -18,6 +18,7 @@
             <a href="nuka-classic.html" style="color:dimgrey">Classic</a>
             <a href="nuka-cherry.html" style="color:dimgrey">Cherry</a>
             <a href="nuka-quantum.html" style="color:dimgrey">Quantum</a>
+            <a href="shopping_cart.html" style="color:dimgrey">Cart</a>
         </nav>
     </header>
     
@@ -40,8 +41,9 @@
         </table>
         
         <div class="total-section">
-            <h3>Order Total: <span id="cart-total">$0.00</span></h3>
-            <button class="checkout-btn" onclick="alert('Thank you for your purchase!')">Checkout</button>
+            <p>Order Total: <span id="cart-total">$0.00</span></p>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button id="checkout-btn">Checkout</button>
         </div>
     </div>
 
