@@ -4,8 +4,7 @@ header {
     font-family: monospace;
     padding:0%;
     animation: rainbow 5s linear infinite;
-    
-  }
+}
 
 .nav {
   font-size: 20px;
