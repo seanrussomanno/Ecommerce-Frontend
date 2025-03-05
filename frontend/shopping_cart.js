@@ -52,7 +52,9 @@ function updateCartDisplay() {
         cartBody.innerHTML = `
             <tr>
                 <td colspan="6" style="text-align: center; padding: 30px;">
-                    Your cart is empty. <a href="product.html">Continue shopping</a>
+                    Your cart is empty.<br> 
+                    <a href="product.html" style="color:white"><br>
+                    Continue shopping</a>
                 </td>
             </tr>
         `;
