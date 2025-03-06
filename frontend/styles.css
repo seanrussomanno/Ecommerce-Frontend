@@ -56,7 +56,7 @@ table {
 .buy-button:hover {
   transform: scale(1.2);
   cursor:pointer;
-  background-color:chartreuse
+  background-color:gold;
 }
 
 footer {
@@ -150,6 +150,3 @@ footer {
   cursor:pointer;
   background-color:red;
 }
-
-
-
