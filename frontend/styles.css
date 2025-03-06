@@ -110,4 +110,32 @@ footer {
     100% { color: red; }
 }
 
+.checkout-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-image: url(images/test.gif);
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 10px;
+}
+
+.checkout-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.return-to-cart {
+  color:gold;
+}
+
 

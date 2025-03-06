@@ -152,22 +152,25 @@ function clearCart() {
 
 // Checkout page functions
 
-// Function to load checkout page data
 function loadCheckoutData() {
     // Make sure we're on the checkout page
     if (!document.getElementById('checkout-items')) return;
     
-    // Get cart data from URL or localStorage
-    const cart = getCartItems();
+    // Get cart data from localStorage
+    const cart = JSON.parse(localStorage.getItem('wastelandCart')) || [];
+    
+    // If cart is empty, redirect back to cart page
+    if (cart.length === 0) {
+        alert('Your cart is empty. Please add items before checking out.');
+        window.location.href = 'shopping_cart.html';
+        return;
+    }
     
     // Display the items
     displayCheckoutItems(cart);
     
     // Calculate and display order totals
     updateCheckoutTotals(cart);
-    
-    // Add event listener to place order button
-    document.getElementById('place-order-btn').addEventListener('click', placeOrder);
 }
 
 // Get cart items (from localStorage or session)
@@ -226,7 +229,6 @@ function displayCheckoutItems(cart) {
     });
 }
 
-// Update checkout totals
 function updateCheckoutTotals(cart) {
     // Calculate subtotal
     const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -255,20 +257,27 @@ function placeOrder() {
     const address = document.getElementById('address').value;
     const city = document.getElementById('city').value;
     const region = document.getElementById('region').value;
+    const paymentMethod = document.getElementById('payment-method').value;
     
     // Validate form
-    if (!name || !email || !address || !city || !region) {
-        alert('Please fill in all required shipping information.');
+    if (!name || !email || !address || !city || !region || !paymentMethod) {
+        alert('Please fill in all required shipping and payment information.');
         return;
     }
     
+    // Get region text
+    const regionText = document.getElementById('region').options[document.getElementById('region').selectedIndex].text;
+    
+    // Get payment method text
+    const paymentText = document.getElementById('payment-method').options[document.getElementById('payment-method').selectedIndex].text;
+    
     // Display confirmation message
-    alert(`Thank you for your order, ${name}!\n\nYour Nuka-Cola products will be delivered to ${address}, ${city} in the ${document.getElementById('region').options[document.getElementById('region').selectedIndex].text}.\n\nPlease have your ${document.getElementById('payment-method').options[document.getElementById('payment-method').selectedIndex].text} ready upon delivery.`);
+    alert(`Thank you for your order, ${name}!\n\nYour Nuka-Cola products will be delivered to ${address}, ${city} in the ${regionText}.\n\nPlease have your ${paymentText} ready upon delivery.`);
     
     // Clear cart
-    localStorage.removeItem('nukaColaCart');
+    localStorage.removeItem('wastelandCart');
     
-    // Redirect to thank you page or home page
+    // Redirect to home page
     window.location.href = 'product.html';
 }
 
