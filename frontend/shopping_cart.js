@@ -149,3 +149,142 @@ function clearCart() {
     localStorage.removeItem('wastelandCart');
     updateCartDisplay();
 }
+
+// Checkout page functions
+
+// Function to load checkout page data
+function loadCheckoutData() {
+    // Make sure we're on the checkout page
+    if (!document.getElementById('checkout-items')) return;
+    
+    // Get cart data from URL or localStorage
+    const cart = getCartItems();
+    
+    // Display the items
+    displayCheckoutItems(cart);
+    
+    // Calculate and display order totals
+    updateCheckoutTotals(cart);
+    
+    // Add event listener to place order button
+    document.getElementById('place-order-btn').addEventListener('click', placeOrder);
+}
+
+// Get cart items (from localStorage or session)
+function getCartItems() {
+    // Initialize empty cart
+    let cart = [];
+    
+    // Get URL parameters (for direct links from product pages)
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    
+    if (product) {
+        // Single item from URL parameters
+        cart.push({
+            id: product,
+            name: urlParams.get('name'),
+            price: parseFloat(urlParams.get('price')),
+            image: urlParams.get('image'),
+            quantity: parseInt(urlParams.get('quantity') || 1)
+        });
+    } else {
+        // Try to get cart from localStorage
+        const storedCart = localStorage.getItem('nukaColaCart');
+        if (storedCart) {
+            cart = JSON.parse(storedCart);
+        }
+    }
+    
+    return cart;
+}
+
+// Display checkout items
+function displayCheckoutItems(cart) {
+    const checkoutItemsContainer = document.getElementById('checkout-items');
+    if (!checkoutItemsContainer) return;
+    
+    // Clear current items
+    checkoutItemsContainer.innerHTML = '';
+    
+    // Add each item
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'order-item';
+        
+        const itemTotal = item.price * item.quantity;
+        
+        itemElement.innerHTML = `
+            <div class="item-details">
+                <img src="${item.image}" alt="${item.name}" class="item-image">
+                <span>${item.name} × ${item.quantity}</span>
+            </div>
+            <div class="item-price">$${itemTotal.toFixed(2)}</div>
+        `;
+        
+        checkoutItemsContainer.appendChild(itemElement);
+    });
+}
+
+// Update checkout totals
+function updateCheckoutTotals(cart) {
+    // Calculate subtotal
+    const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    
+    // Calculate tax (9%)
+    const tax = subtotal * 0.09;
+    
+    // Calculate shipping (free over $50)
+    const shipping = subtotal > 50 ? 0 : 5;
+    
+    // Calculate total
+    const total = subtotal + tax + shipping;
+    
+    // Update display
+    document.getElementById('checkout-subtotal').textContent = '$' + subtotal.toFixed(2);
+    document.getElementById('checkout-tax').textContent = '$' + tax.toFixed(2);
+    document.getElementById('checkout-shipping').textContent = shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2);
+    document.getElementById('checkout-total').textContent = '$' + total.toFixed(2);
+}
+
+// Handle place order submission
+function placeOrder() {
+    // Get form values
+    const name = document.getElementById('full-name').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const city = document.getElementById('city').value;
+    const region = document.getElementById('region').value;
+    
+    // Validate form
+    if (!name || !email || !address || !city || !region) {
+        alert('Please fill in all required shipping information.');
+        return;
+    }
+    
+    // Display confirmation message
+    alert(`Thank you for your order, ${name}!\n\nYour Nuka-Cola products will be delivered to ${address}, ${city} in the ${document.getElementById('region').options[document.getElementById('region').selectedIndex].text}.\n\nPlease have your ${document.getElementById('payment-method').options[document.getElementById('payment-method').selectedIndex].text} ready upon delivery.`);
+    
+    // Clear cart
+    localStorage.removeItem('nukaColaCart');
+    
+    // Redirect to thank you page or home page
+    window.location.href = 'product.html';
+}
+
+// Initialize checkout page
+document.addEventListener('DOMContentLoaded', function() {
+    // If on checkout page, load checkout data
+    if (document.getElementById('checkout-items')) {
+        loadCheckoutData();
+    }
+    
+    // If the checkout button exists on the cart page, set it up
+    const checkoutButton = document.querySelector('.checkout-btn');
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', function() {
+            window.location.href = 'checkout.html';
+        });
+    }
+});
+
