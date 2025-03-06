@@ -42,8 +42,8 @@ table {
 }
 
 .table {
-  color:olive;
-  font-size: 14px;
+  color:gold;
+  font-size: 18px;
 }
 
 .buy-button {
@@ -83,7 +83,7 @@ footer {
 #clear-cart:hover {
   transform: scale(1.2);
   cursor:pointer;
-  background-color:chartreuse;
+  background-color:red;
 }
 
 #checkout-btn {
@@ -137,5 +137,19 @@ footer {
 .return-to-cart {
   color:gold;
 }
+
+.remove-btn {
+  padding: 5px 10px;
+  background-color:azure;
+  border-radius: 5px;
+  transition: transform 0.7s ease;
+}
+
+.remove-btn:hover {
+  transform: scale(1.2);
+  cursor:pointer;
+  background-color:red;
+}
+
 
 
