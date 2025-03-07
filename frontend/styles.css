@@ -99,17 +99,6 @@ footer {
   background-color:chartreuse;
 }
 
-  @keyframes rainbow {
-    0% { color: red; }
-    14% { color: orange; }
-    28% { color: yellow; }
-    42% { color: green; }
-    56% { color: blue; }
-    70% { color: indigo; }
-    84% { color: violet; }
-    100% { color: red; }
-}
-
 .checkout-container {
   max-width: 1000px;
   margin: 20px auto;
@@ -150,3 +139,16 @@ footer {
   cursor:pointer;
   background-color:red;
 }
+
+  @keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    56% { color: blue; }
+    70% { color: indigo; }
+    84% { color: violet; }
+    100% { color: red; }
+}
+
+
