@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('wastelandCart', JSON.stringify(cart));
         
         // Clear URL parameters to prevent adding same item multiple times on refresh
-        window.history.replaceState({}, document.title, '/frontend/shopping_cart.html');
-    }
+        window.history.replaceState({}, document.title, 'shopping_cart.html');    }
     
     // Update the cart display
     updateCartDisplay();
