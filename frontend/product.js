@@ -7,18 +7,18 @@ let cherryInStock = 28;
 let quantumInStock = 3;
 
 let cartTotal = 0;
-
+alert("hello")
 function addClassic() {
     cartTotal += classicPrice;
-    alert("Classic added to cart! Cart total: $" + cartTotal);
+    alert("Classic added to cart! Cart total: $" + cartTotal.toFixed(2));
 }
 
 function addCherry() {
     cartTotal += cherryPrice;
-    alert("Cherry added to cart! Cart total: $" + cartTotal);
+    alert("Cherry added to cart! Cart total: $" + cartTotal.toFixed(2));
 }
 
 function addQuantum() {
     cartTotal += quantumPrice;
-    alert("Quantum added to cart! Cart total: $" + cartTotal)
+    alert("Quantum added to cart! Cart total: $" + cartTotal.toFixed(2))
 }
