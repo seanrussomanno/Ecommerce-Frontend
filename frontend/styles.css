@@ -74,6 +74,11 @@ footer {
     object-fit: contain;
 }
 
+#product-select {
+  width: 200px;
+  height: 30px;
+}
+
 #clear-cart {
   padding: 10px 20px;
   background-color:azure;
