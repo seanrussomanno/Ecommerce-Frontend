@@ -18,12 +18,10 @@ function updatePrice() {
     }
 }
 
-
 function selectProduct(product) {
     selectedProduct = product;
     updatePrice();
 }
-
 
 function addToCart() {
     if (selectedProduct === "classic") {
@@ -37,7 +35,6 @@ function addToCart() {
         alert("Quantum added to cart! Cart total: $" + cartTotal.toFixed(2));
     }
 }
-
 
 window.onload = function() {
     updatePrice(); 
