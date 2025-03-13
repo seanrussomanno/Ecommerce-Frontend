@@ -1,22 +1,29 @@
-const classicPrice = 11.99;
-const cherryPrice = 17.99;
-const quantumPrice = 24.99;
+// const classicPrice = 11.99;
+// const cherryPrice = 17.99;
+// const quantumPrice = 24.99;
+
+const varieties = [
+    {flavor: "classic", price:11.99},
+    {flavor: "cherry", price:17.99},
+    {flavor: "quantum", price:24.99}
+];
 
 let cartTotal = 0;
 let selectedProduct = "classic"; 
 
 
-function updatePrice() {
-    let priceDisplay = document.getElementById("selected-price");
+// function updatePrice() {
+//     let priceDisplay = document.getElementById("selected-price");
     
-    if (selectedProduct === "classic") {
-        priceDisplay.textContent = "$" + classicPrice.toFixed(2);
-    } else if (selectedProduct === "cherry") {
-        priceDisplay.textContent = "$" + cherryPrice.toFixed(2);
-    } else if (selectedProduct === "quantum") {
-        priceDisplay.textContent = "$" + quantumPrice.toFixed(2);
-    }
-}
+//     if (selectedProduct === "classic") {
+//         priceDisplay.textContent = "$" + classicPrice.toFixed(2);
+//     } else if (selectedProduct === "cherry") {
+//         priceDisplay.textContent = "$" + cherryPrice.toFixed(2);
+//     } else if (selectedProduct === "quantum") {
+//         priceDisplay.textContent = "$" + quantumPrice.toFixed(2);
+//     }
+// }
+// THis ^^ did not use the array and was hardcoded.
 
 function selectProduct(product) {
     selectedProduct = product;
