@@ -19,7 +19,8 @@ function updatePrice() {
     }
 };
 
-// *this was all hardcoded and i changed it*
+// <><><><><><><><<><><><<><><><><><><><><><><><<><><><><><>><><
+// ***updatePrice was all hardcoded and i changed it for JS functionality***
 // function updatePrice() {
 //     let priceDisplay = document.getElementById("selected-price");
     
@@ -31,6 +32,8 @@ function updatePrice() {
 //         priceDisplay.textContent = "$" + quantumPrice.toFixed(2);
 //     }
 // }
+// <><><><><><><><<><><><<><><><><><><><><><><><<><><><><><>><><
+
 
 function generateDropdownOptions() {
     const selectElement = document.getElementById("product-select");
