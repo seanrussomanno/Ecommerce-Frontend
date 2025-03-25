@@ -16,15 +16,14 @@ header {
     text-align: center;
     margin-left: auto; margin-right: auto; width: 70%;
     background-color:black;
-    background-image: url(images/test.gif);
-    background-position:center center;
+    background-position:center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: aliceblue;
 }
 
 #nuka-classic {
-  color: coral;
+    color: coral;
 }
 
 #nuka-cherry {
@@ -36,7 +35,7 @@ header {
 }
 
 table {
-  margin-left: auto; margin-right: auto; width: 60%;
+  margin-left: auto; margin-right: auto;
   border:crimson;
   color: aliceblue;
 }
@@ -44,21 +43,21 @@ table {
 .table {
   color:gold;
   font-size: 18px;
+  
 }
 
 .buy-button {
-  padding: 10px 20px;
   background-color:azure;
   border-radius: 10px;
   transition: transform 0.7s ease;
 }
-
+/*
 .buy-button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   cursor:pointer;
   background-color:gold;
 }
-
+*/
 footer {
     margin-top: 10px;
     text-align: center;
@@ -71,6 +70,11 @@ footer {
     width: 60px;
     height: 60px;
     object-fit: contain;
+}
+
+#product-select {
+  width: 200px;
+  height: 30px;
 }
 
 #clear-cart {
